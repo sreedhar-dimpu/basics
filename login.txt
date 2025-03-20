@@ -1,0 +1,8 @@
+CREATE TABLE transactions(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  type ENUM('Revenue', 'Expense') NOT NULL,
+  payment_type ENUM('Cash', 'Card', 'UPI', 'Bank Transfer') NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  transaction_date DATE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
